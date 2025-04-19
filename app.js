@@ -1,5 +1,5 @@
 const express = require('express');
-const sequelize = require('./models');
+const sequelize = require('./models/db');
 const Car = require('./models/Car');
 const cors = require('cors');
 const app = express();

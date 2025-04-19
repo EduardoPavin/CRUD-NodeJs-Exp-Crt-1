@@ -9,23 +9,23 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER,
       },
-      modelo: {
+      model: {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      marca: {
+      brand: {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      ano: {
+      year: {
         type: Sequelize.INTEGER,
         allowNull: false,
       },
-      cor: {
+      color: {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      placa: {
+      plate: {
         type: Sequelize.STRING,
         allowNull: false,
       },

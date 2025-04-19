@@ -1,22 +1,22 @@
 const { DataTypes } = require('sequelize');
-const sequelize = require('./index');
+const sequelize = require('./db');
 
 const Car = sequelize.define('Car', {
-  modelo: {
+  model: {
     type: DataTypes.STRING,
     allowNull: false,
     validate: {
       notEmpty: { msg: "Modelo é obrigatório" }
     }
   },
-  marca: {
+  brand: {
     type: DataTypes.STRING,
     allowNull: false,
     validate: {
       notEmpty: { msg: "Marca é obrigatória" }
     }
   },
-  ano: {
+  year: {
     type: DataTypes.INTEGER,
     allowNull: false,
     validate: {
@@ -28,14 +28,14 @@ const Car = sequelize.define('Car', {
       },
     }
   },
-  cor: {
+  color: {
     type: DataTypes.STRING,
     allowNull: false,
     validate: {
       notEmpty: { msg: "Cor é obrigatória" }
     }
   },
-  placa: {
+  plate: {
     type: DataTypes.STRING,
     allowNull: false,
     validate: {
