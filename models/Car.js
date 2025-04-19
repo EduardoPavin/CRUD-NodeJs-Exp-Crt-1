@@ -40,17 +40,17 @@ const Car = sequelize.define('Car', {
     allowNull: false,
     validate: {
       notEmpty: { msg: "Placa é obrigatória" },
-      isValidPlaca(value) {
-        const placa = value.toUpperCase(); 
+      isValidPlate(value) {
+        const plate = value.toUpperCase(); 
         const formatoAntigo = /^[A-Z]{3}[0-9]{4}$/;
         const formatoMercosul = /^[A-Z]{3}[0-9][A-Z][0-9]{2}$/;
-        if (!formatoAntigo.test(placa) && !formatoMercosul.test(placa)) {
+        if (!formatoAntigo.test(plate) && !formatoMercosul.test(plate)) {
           throw new Error('Placa inválida (ex: ABC1234 ou BRA1E23)');
         }
       }
     },
     set(value) {
-      this.setDataValue('placa', value.toUpperCase());
+      this.setDataValue('plate', value.toUpperCase());
     }
   },
 });
